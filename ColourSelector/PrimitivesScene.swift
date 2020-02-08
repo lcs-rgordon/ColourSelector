@@ -24,7 +24,7 @@ class PrimitivesScene: SCNScene {
         
         // Iterate around the circle
 //        let segments: Double = 8  // DEBUG: To see how this works (compare to image referenced above)
-        let segments: Double = 360  // 360 segements gets you a full circle
+        let segments: Double = 360  // 360 segments gets you a full circle
         let increment = 360.0 / segments
         for angle in stride(from: 0.0, to: 360.0, by: increment) {
 
