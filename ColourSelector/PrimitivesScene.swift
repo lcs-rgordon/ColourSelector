@@ -14,10 +14,56 @@ class PrimitivesScene: SCNScene {
     override init() {
         super.init()
         
-        addOctahedron()
+        addColourDisc()
         
     }
     
+    func addColourDisc() {
+
+        // Iterate around the circle
+        let segments = 360.0
+        let increment = 360.0 / segments
+        for angle in stride(from: 0.0, to: 360.0, by: increment) {
+
+            // Going counter-clockwise around the vertices
+            
+            // Origin - vertex 0
+            let origin = SCNVector3(0, 0, 0)
+            
+            // Along horizontal axis (if angle is 0 degrees) - vertex 1
+            let alongAxis = SCNVector3(cos(angle.degreesToRadians), sin(angle.degreesToRadians), 0)
+            
+            // Above horizontal axis (if angle is 0 degrees) - vertex 2
+            let aboveAxis = SCNVector3(cos((angle + increment).degreesToRadians), sin((angle + increment).degreesToRadians), 0)
+            
+            // Define vertices for this segment
+            let vertices: [SCNVector3] = [origin, alongAxis, aboveAxis]
+
+            // Create the geometry source from the specified vertices
+            let source = SCNGeometrySource(vertices: vertices)
+            
+            // Define the surface
+            let indices: [UInt16] = [
+                0, 1, 2
+            ]
+            let element = SCNGeometryElement(indices: indices, primitiveType: .triangles)
+
+            // Define the geometry
+            let geometry = SCNGeometry(sources: [source], elements: [element])
+            
+            // Set the color of this object
+            geometry.firstMaterial?.diffuse.contents = NSColor(hue: CGFloat(angle) / 360, saturation: 80/100, brightness: 100/100, alpha: 100/100)
+                    
+            // Create the node
+            let node = SCNNode(geometry: geometry)
+            
+            // Add to scene
+            self.rootNode.addChildNode(node)
+
+        }
+        
+    }
+
     func addOctahedron() {
 
         // Create an octahedron

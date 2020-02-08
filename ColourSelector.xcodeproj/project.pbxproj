@@ -12,6 +12,7 @@
 		81DC701823EEF3CF00114276 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DC701723EEF3CF00114276 /* Assets.xcassets */; };
 		81DC701B23EEF3CF00114276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81DC701923EEF3CF00114276 /* Main.storyboard */; };
 		81DC702423EEF55100114276 /* PrimitivesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DC702323EEF55100114276 /* PrimitivesScene.swift */; };
+		81DC702623EF045E00114276 /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DC702523EF045E00114276 /* MathLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		81DC701C23EEF3CF00114276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81DC701D23EEF3CF00114276 /* ColourSelector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ColourSelector.entitlements; sourceTree = "<group>"; };
 		81DC702323EEF55100114276 /* PrimitivesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimitivesScene.swift; sourceTree = "<group>"; };
+		81DC702523EF045E00114276 /* MathLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				81DC701C23EEF3CF00114276 /* Info.plist */,
 				81DC701D23EEF3CF00114276 /* ColourSelector.entitlements */,
 				81DC702323EEF55100114276 /* PrimitivesScene.swift */,
+				81DC702523EF045E00114276 /* MathLibrary.swift */,
 			);
 			path = ColourSelector;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 				81DC701423EEF3CC00114276 /* GameViewController.swift in Sources */,
 				81DC701223EEF3CC00114276 /* AppDelegate.swift in Sources */,
 				81DC702423EEF55100114276 /* PrimitivesScene.swift in Sources */,
+				81DC702623EF045E00114276 /* MathLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
