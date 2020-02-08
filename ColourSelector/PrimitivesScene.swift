@@ -15,9 +15,15 @@ class PrimitivesScene: SCNScene {
         super.init()
         
         // Create a white sphere
-        let sphereGeometry = SCNSphere(radius: 1.0)
-        let sphereNode = SCNNode(geometry: sphereGeometry)
-        self.rootNode.addChildNode(sphereNode)
+//        let sphereGeometry = SCNSphere(radius: 1.0)
+//        let sphereNode = SCNNode(geometry: sphereGeometry)
+//        self.rootNode.addChildNode(sphereNode)
+        
+        // Create a disc
+        let discGeometry = SCNPlane(width: 1, height: 1)
+        discGeometry.cornerRadius = discGeometry.width / 2
+        let discNode = SCNNode(geometry: discGeometry)
+        self.rootNode.addChildNode(discNode)
     }
     
     required init(coder aDecoder: NSCoder) {
