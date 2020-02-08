@@ -20,8 +20,11 @@ class PrimitivesScene: SCNScene {
     
     func addColourDisc() {
 
+        // NOTE: For rough plan of how this works, see image included in project.
+        
         // Iterate around the circle
-        let segments: Double = 360
+//        let segments: Double = 8  // DEBUG: To see how this works (compare to image referenced above)
+        let segments: Double = 360  // 360 segements gets you a full circle
         let increment = 360.0 / segments
         for angle in stride(from: 0.0, to: 360.0, by: increment) {
 
