@@ -19,6 +19,12 @@ class GameViewController: NSViewController {
         sceneView.scene = PrimitivesScene()
         sceneView.backgroundColor = NSColor.black
         
+        // Turn on the lights
+        sceneView.autoenablesDefaultLighting = true
+        
+        // Allow camera control
+        sceneView.allowsCameraControl = true
+        
     }
     
 //    @objc
